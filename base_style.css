@@ -1,22 +1,25 @@
 @font-face
 {
-  font-family: 'HKGrotesk-Bold';
-  src: url('polices/hkgrotesk/HKGrotesk-Bold.otf') format('opentype');
+  font-family: 'FredokaOne';
+  src: url('polices/FredokaOne/FredokaOne-Regular.ttf') format('truetype');
 }
 
 @font-face
 {
-  font-family: 'HKGrotesk-Medium';
-  src: url('polices/hkgrotesk/HKGrotesk-Medium.otf') format('opentype');
+  font-family: 'UbuntuRegular';
+  src: url('polices/Ubuntu/Ubuntu-Regular.ttf') format('truetype');
 }
 
 @font-face
 {
-  font-family: 'SFUIText-Regular';
-  src: url('polices/SFui/SFUIText-Regular.woff') format('woff');
+  font-family: 'UbuntuMedium';
+  src: url('polices/Ubuntu/Ubuntu-Medium.ttf') format('truetype');
 }
 
-
+:root
+{
+  --yellow: #faae02;
+}
 
 /* La propriété border box nous permettra d'ajouter du padding et des bordures à nos éléments sans incrémenter leur taille */
 html
@@ -34,10 +37,10 @@ html
 body
 {
     margin: 0;
-    min-width: 320px;
+   background-color: cyan;
 }
 
-h1, h2, p, ul
+h1, h2, h3, p, ul
 {
     margin: 0;
     padding: 0;
