@@ -1,0 +1,44 @@
+@font-face
+{
+  font-family: 'HKGrotesk-Bold';
+  src: url('polices/hkgrotesk/HKGrotesk-Bold.otf') format('opentype');
+}
+
+@font-face
+{
+  font-family: 'HKGrotesk-Medium';
+  src: url('polices/hkgrotesk/HKGrotesk-Medium.otf') format('opentype');
+}
+
+@font-face
+{
+  font-family: 'SFUIText-Regular';
+  src: url('polices/SFui/SFUIText-Regular.woff') format('woff');
+}
+
+
+
+/* La propriété border box nous permettra d'ajouter du padding et des bordures à nos éléments sans incrémenter leur taille */
+html
+{
+    box-sizing: border-box;
+}
+
+/* On fait hériter le border-box de notre sélecteur html à l'ensemble des autres sélecteurs */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body
+{
+    margin: 0;
+    min-width: 320px;
+}
+
+h1, h2, p, ul
+{
+    margin: 0;
+    padding: 0;
+}
