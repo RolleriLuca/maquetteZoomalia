@@ -1,0 +1,165 @@
+/* ----------------------------MISE EN FORME DU HEADER---------------------------- */
+
+#header_nav
+{
+    height: 100.5px;
+    background-color: white;
+}
+
+#header_banner
+{
+    height: 486px;
+    background-color: red;
+}
+
+
+
+
+/* ----------------------------MISE EN FORME DES SECTIONS PRINCIPALES---------------------------- */
+
+.secondary_container
+{
+    margin-top: 55px;
+}
+
+
+/* --------MISE EN FORME CATEGORIES-------- */
+
+#categories
+{
+    height: 198.5px;
+    background-color: green;
+}
+
+
+/* --------MISE EN FORME MOMENTPRODUCT-------- */
+
+#momentProduct
+{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: 
+    "title"
+    "scrollingMenu"
+    "product"
+    "description";
+    justify-items: center;
+
+    height: 582px;
+    background-color: purple;
+    font-family: 'UbuntuRegular', sans-serif;
+}
+
+#momentProduct h2
+{
+    grid-area: title;
+}
+
+#momentProduct_scrollingMenu
+{
+    grid-area: scrollingMenu;
+    background-color: green;
+}
+
+#scrollingMenu_top
+{
+    display: flex;
+    flex-direction: row;
+}
+
+#scrollingMenu_top h3
+{
+    color: var(--yellow);
+    padding: 0px 7px 10px 7px;
+}
+
+#scrollingMenu_top img
+{
+    width: 20px;
+    height: 20px;
+}
+
+/* #momentProduct_scrollingMenu:hover #arrow
+{
+    rotate: 180deg;
+    transition: 0.5s;
+}
+
+
+#momentProduct_scrollingMenu:hover .scrolling
+{
+    display: block;
+} */
+
+.scrolling
+{
+    display: none;
+    position: absolute;
+}
+
+.underScrolling
+{
+    list-style: none;;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#momentProduct_product
+{
+    grid-area: product;
+}
+
+#momentProduct_description
+{
+    grid-area: description;
+}
+
+
+
+/* --------MISE EN FORME WELLBEING-------- */
+
+#wellBeing
+{
+    height: 1304.5px;
+    background-color: maroon;
+}
+
+
+/* --------MISE EN FORME WHOWEARE-------- */
+
+#whoWeAre
+{
+    height: 1946px;
+    background-color: rgb(118, 118, 196);
+}
+
+
+/* --------MISE EN FORME PAYMENTSMETHODS-------- */
+#paymentMethods
+{
+    height: 82px;
+    background-color: rgb(95, 141, 201);
+}
+
+
+
+
+/* ----------------------------MISE EN FORME FOOTER---------------------------- */
+
+footer
+{
+    height: 372px;
+    background-color: midnightblue;
+}
