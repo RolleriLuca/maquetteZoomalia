@@ -12,44 +12,141 @@
 
         <header>
 
-            <div id="header_top">
+            <nav id="header_nav">
                 <div id="burgerMenu"></div>
-                <p>LOGO</p>
+                <h1>Zoomalia</h1>
                 <div id="features"></div>
-            </div>
+            </nav>
             
-
-            <div id="header_bandeau"></div>
+            <div id="header_banner"></div>
             
         </header>
 
-        <main>
+        <main id="main_container">
 
-            <section id="categories">
+            <section class="secondary_container" id="categories">
 
-                <div id="visualCategories">
-
-                </div>
-
-                <div id="informationProduct">
-
-                    <div id="visualProduct_top">
-
-                    </div>
-
-                    <div id="visualProduct_bottom">
-
-                    </div>
+                <h2>categories</h2>
+                <div id="categories_visual">
 
                 </div>
-
-                
 
             </section>
 
-            <div id="infoProduct"></div>
+            <section class="secondary_container" id="momentProduct">
+                <h2>Produits du moment</h2>
+
+                <div id="momentProduct_scrollingMenu">
+
+                    <div id="scrollingMenu_top">
+                        <img src="icônes/dog-paw.png" alt="patte de chien">
+                        <h3>Chien</h3>
+                        <img id="arrow" src="icônes/chevronBlack.png" alt="flèche-haut">
+                    </div>
+                    
+                    <ul class="scrolling" id="scrollingList">
+                        <li class="underScrolling">Chat</li>
+                        <li class="underScrolling">Rongeurs</li>
+                        <li class="underScrolling">Aquario</li>
+                        <li class="underScrolling">Reptiles</li>
+                        <li class="underScrolling">Oiseaux</li>
+                        <li class="underScrolling">Bassins</li>
+                        <li class="underScrolling">Ferme</li>
+                    </ul>
+                </div>
+
+                <article id="momentProduct_product"> 
+                </article>  
+
+                <aside id="momentProduct_description">
+                    <p>Amusez facilement votre chien avec cette balle sonore en vinyl.</p>
+
+                    <a>voir plus de produits</a>
+                </aside>
+            </section>
+
+            <section class="secondary_container" id="wellBeing">
+
+                <article id="wellBeing_bandeau"></article>
+
+                <article id="wellBeing_veterinary">
+                    <h2>les conseils vétérinaires</h2>
+                    <p>Julie, notre incroyable vétérinaire, répondraà toutes vos questions en moins de 72h ! 
+                    Elle met également à votre disposition une centaine d'articles sur des thématiques autour du bien-être 
+                    de votre animal.</p>
+                    <a href="">A découvrir sur Zoomalia Véto</a>
+                </article>
+
+                <article id="wellBeing_community">
+                    <h2>au plus près de votre compagnon</h2>
+                    <p>Besoin de comparer des produits, d'obtenir des fiches conseils ou encore simplement de se tenir 
+                    informé de l'actualité animale ? Les blog et forum Zoomalia sont donc faits 
+                    pour vous. Alimentés par des passionnés pour des passionnés, ne ratez pas les interviews de 
+                    professionnels et d'associations ou les derniers faits divers !</p>
+                    <a href="">Venez échanger avec notre communauté !</a>
+                </article>
+
+            </section>
+
+            <section class="secondary_container" id="whoWeAre">
+
+                <article id="whoWeAre_bandeau">
+                    <h2>qui sommes-nous ?</h2>
+
+                    <p>Nous sommes l'animalerie en ligne nouvelle génération. Nous sélectionnons les produits et les 
+                    accessoires de la meilleure qualité du marché, et nous créons des marques exclusives à un prix 
+                    accessible à tous. Chez Zoomalia, nous sommes plus de 50 collaborateurs à vivre au quotidien notre 
+                    passion des animaux. Chacun d'entre nous partage une culture d'entreprise forte basée sur nos 
+                    trois fondamentaux qui sont l'engagement, le partage et l'ambition.
+                    </p>
+
+                    <p>Le bien-être des animaux est au coeur de notre métier. Nous favorisons la relation avec votre 
+                    compagnon de manière à apporter un peu plus de bonheur chaque jour au sein de votre foyer.
+                    </p>
+
+                    <a href="">Venez découvrir l'équipe</a>
+                </article>
+
+                <article id="whoWeAre_people">
+                </article>
+
+                <article id="whoWeAre_commitments">
+                    <h2>nos engagements</h2>
+
+                    <div id="commitments_content"></div>
+                </article>
+
+                <article id="whoWeAre_trust">
+                    <h2>pourquoi vous nous faites confiance ?</h2>
+
+                    <div id="trust_content">
+                        <p>4.6 avis sur 100 000 avis.</p>
+
+                        <a href="">Venez découvrir ce que vous pensez de Nous</a>
+                    </div>
+                </article>
+                
+            </section>
+
+            <div id="paymentMethods">
+
+            </div>
 
         </main>
+
+        <footer>
+            <h1>Zoomalia</h1>
+
+            <p>Venez rejoindre la communauté !</p>
+
+            <div id="footer_socialMedia"></div>
+
+            <nav id="footer_princpalNav"></nav>
+
+            <nav id="footer_secondaryNav"></nav>
+        </footer>
+
+        <script src="index_JS.js"></script>
         
     </body>
 
