@@ -19,6 +19,7 @@
 :root
 {
   --yellow: #faae02;
+  --grey: #2c4251;
 }
 
 /* La propriété border box nous permettra d'ajouter du padding et des bordures à nos éléments sans incrémenter leur taille */
@@ -37,7 +38,7 @@ html
 body
 {
     margin: 0;
-   background-color: cyan;
+   /* background-color: cyan; */
 }
 
 h1, h2, h3, p, ul
