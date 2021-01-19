@@ -1,17 +1,171 @@
 /* ----------------------------MISE EN FORME DU HEADER---------------------------- */
 
-#header_nav
+#header_top
 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    position: fixed;
     height: 100.5px;
     background-color: white;
+
+    z-index: 1;
+}
+
+#header_top img
+{
+    width: 30px;
+    height: 30px;
+}
+
+#heartIcon
+{
+    margin-right: 15px;
 }
 
 #header_banner
 {
     height: 486px;
-    background-color: red;
+    /* background-color: red; */
 }
 
+#header_top ul
+{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+#header_top li a 
+{
+    display: block;
+    padding: 20px 20px;
+    border-right: 1px solid #f4f4f4;
+    text-decoration: none;
+}
+
+#header_top .menu-icon 
+{
+    cursor: pointer;
+    /* display: inline-block; */
+    float: right;
+    padding: 28px 20px;
+    /* position: relative; */
+    user-select: none;
+}
+
+#header_top li a:hover,
+#header_top .menu-btn:hover 
+{
+    background-color: #f4f4f4;
+}
+
+#header_top .menu 
+{
+    /* clear: both; */
+    position: absolute;
+    width: 100%;
+    top: 100.5px;
+    height: 0px;
+    transition: height .2s ease-out;
+}
+
+#header .menu-icon 
+{
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+}
+
+.navicon 
+{
+    background: #333;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+}
+
+.navicon:before
+{
+    background: #333;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;   
+
+    top: 5px;
+}
+
+.navicon:after 
+{
+    background: #333;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+
+    top: -5px;
+}
+
+.menu-btn 
+{
+    display: none;
+}
+
+#menu-btn:checked ~ .menu
+{
+    height: 100vh;
+}
+
+.menu-btn:checked ~ .menu-icon .navicon
+{
+    background: transparent;
+}
+
+.menu-btn:checked ~ .menu-icon .navicon:after 
+{
+    transform: rotate(45deg);
+}
+
+.menu-btn:checked ~ .menu-icon .navicon:before 
+{
+    transform: rotate(-45deg);
+}
+
+.menu-btn:checked ~ .menu-icon .navicon:before,
+.menu-btn:checked ~ .menu-icon .navicon:after 
+{
+    top: 0px;
+}
+
+
+
+
+/* ----------------------------MISE EN FORME DU MAIN---------------------------- */
+
+#main_container h2
+{
+    font-family: 'FredokaOne', sans-serif ;
+    color: black;
+}
+
+#main_container p
+{
+    font-family: 'UbuntuRegular', sans-serif ;
+    line-height: 24px;
+}
 
 
 
@@ -27,8 +181,16 @@
 
 #categories
 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     height: 198.5px;
-    background-color: green;
+    /* background-color: green; */
+}
+
+#categories_visual
+{
+    margin-top: 45px;
 }
 
 
@@ -46,8 +208,7 @@
     "description";
     justify-items: center;
 
-    height: 582px;
-    background-color: purple;
+    /* background-color: purple; */
     font-family: 'UbuntuRegular', sans-serif;
 }
 
@@ -58,6 +219,7 @@
 
 #momentProduct_scrollingMenu
 {
+    margin-top: 30px;
     grid-area: scrollingMenu;
     background-color: green;
 }
@@ -80,18 +242,6 @@
     height: 20px;
 }
 
-/* #momentProduct_scrollingMenu:hover #arrow
-{
-    rotate: 180deg;
-    transition: 0.5s;
-}
-
-
-#momentProduct_scrollingMenu:hover .scrolling
-{
-    display: block;
-} */
-
 .scrolling
 {
     display: none;
@@ -103,23 +253,76 @@
     list-style: none;;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 #momentProduct_product
 {
     grid-area: product;
 }
+
+#momentProduct_product
+{
+    margin-top: 30px;
+    text-align: center;
+}
+
+#productImage
+{
+    position: relative;
+}
+
+#productImage img
+{
+    position: absolute;
+    top: 37px;
+    left: 50px;
+}
+
+
+#momentProduct_product :nth-child(2n)
+{
+    font-family: 'FredokaOne', sans-serif;
+}
+
+#momentProduct_product :nth-child(3n)
+{
+    text-transform: uppercase;
+    margin-top: 6px;
+}
+
+#momentProduct_description
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    text-align: center;
+}
+
+#momentProduct_description p
+{
+    margin-bottom: 30px;
+}
+
+#momentProduct_description a
+{
+    display: flex;
+    width: 246px;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+    font-family: 'FredokaOne', sans-serif;
+    padding: 30px 0px;
+    border-radius: 8px;
+   
+    background-color: var(--yellow);
+}
+
+#momentProduct_description img
+{
+    width: 20px;
+    height: 20px;
+    margin-right: 15px;
+}
+
 
 #momentProduct_description
 {
@@ -133,7 +336,132 @@
 #wellBeing
 {
     height: 1304.5px;
-    background-color: maroon;
+    /* background-color: maroon; */
+}
+
+#wellBeing_bandeau
+{
+    background-color: var(--grey);
+}
+
+#bandeau_text
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#wellBeing_bandeau h2, #wellBeing_bandeau p
+{
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+    width: 245px;
+}
+
+#wellBeing_bandeau h2
+{
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
+#wellBeing_bandeau p
+{
+    font-size: 16px;
+}
+
+#bandeau_image
+{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+#wellBeing_veterinary
+{
+    display: grid;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: 
+    "title"
+    "photo"
+    "description"
+    "button";
+    justify-items: center;
+    row-gap: 20px;
+
+    text-align: center;
+}
+
+#wellBeing_veterinary h2
+{
+     text-transform: uppercase;
+     font-size: 20px;
+     margin-top: 30px;
+}
+
+#wellBeing_veterinary a
+{
+    display: flex;
+    width: 274px;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    font-family: 'FredokaOne', sans-serif;
+    padding: 10px 0px;
+    border-radius: 8px;
+   
+    background-color: var(--yellow);
+}
+
+#wellBeing_veterinary a img
+{
+    width: 20px;
+    height: 20px;
+    margin-left: 15px;
+}
+
+#wellBeing_community
+{
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: 
+    "title"
+    "description"
+    "button";
+    justify-items: center;
+    row-gap: 20px;
+
+    text-align: center;
+}
+
+#wellBeing_community h2
+{
+     text-transform: uppercase;
+     font-size: 20px;
+     margin-top: 30px;
+}
+
+#wellBeing_community a
+{
+    display: flex;
+    width: 274px;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    font-family: 'FredokaOne', sans-serif;
+    padding: 10px 0px;
+    border-radius: 8px;
+   
+    background-color: var(--yellow);
+}
+
+#wellBeing_community a img
+{
+    width: 20px;
+    height: 20px;
+    margin-left: 15px;
 }
 
 
