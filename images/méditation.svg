@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="80" height="80" viewBox="0 0 80 80">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_121" data-name="Rectangle 121" width="80" height="80" transform="translate(-2477 3568)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="Groupe_de_masques_1" data-name="Groupe de masques 1" transform="translate(2477 -3568)" clip-path="url(#clip-path)">
+    <g id="meditation" transform="translate(-2477 3568)">
+      <circle id="Ellipse_9" data-name="Ellipse 9" cx="10" cy="10" r="10" transform="translate(29.999)" fill="#528e8e"/>
+      <path id="Tracé_47" data-name="Tracé 47" d="M59.435,72.766,47.12,77.384l6.124,2.3a5,5,0,0,0,6.438-2.927A4.944,4.944,0,0,0,59.435,72.766Z" fill="#528e8e"/>
+      <path id="Tracé_48" data-name="Tracé 48" d="M16.756,55.316a5,5,0,1,0-3.511,9.365L18.639,66.7,32.88,61.363Z" fill="#528e8e"/>
+      <path id="Tracé_49" data-name="Tracé 49" d="M69.682,58.243a5.014,5.014,0,0,0-6.438-2.927l-40,15a5,5,0,1,0,3.511,9.365l40-15A5,5,0,0,0,69.682,58.243Z" fill="#528e8e"/>
+      <path id="Tracé_50" data-name="Tracé 50" d="M75,40H63.09L54.472,22.763A5,5,0,0,0,49.877,20H30.122a5,5,0,0,0-4.595,2.764L16.91,40H5A5,5,0,1,0,5,50H20a5,5,0,0,0,4.472-2.764L30,36.181V54.943l10,3.75,10-3.751V36.181l5.527,11.054A5,5,0,0,0,60,50H75a5,5,0,0,0,0-10Z" fill="#528e8e"/>
+    </g>
+  </g>
+</svg>
