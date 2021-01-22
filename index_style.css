@@ -1,4 +1,8 @@
 /* ----------------------------MISE EN FORME DU HEADER---------------------------- */
+.svg_stock
+{
+    display: none;
+}
 
 .header_top
 {
@@ -7,6 +11,7 @@
     justify-content: space-around;
     width: 100%;
     position: fixed;
+    top: 0;
     height: 100.5px;
     background-color: white;
 
@@ -26,8 +31,16 @@
 
 .header_banner
 {
+    margin-top: 100.5px;
     height: 486px;
-    /* background-color: red; */
+    background-color: red;
+}
+
+.header_banner img
+{
+    max-width: 100%;
+    object-fit: cover;
+    height: 486px;
 }
 
 .header_top ul
@@ -528,20 +541,9 @@ p
     margin-top: 20px;
 }
 
-.whoWeAre_people
-{
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
-}
-
 .perso
 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     text-align: center;
-    padding: 0px 25px;
 }
 
 .identity
@@ -662,6 +664,46 @@ p
     margin-left: 15px;
 }
 
+/* --------GESTION DU SLIDER-------- */
+
+.container
+{
+    width: 203px;
+    margin: auto;
+    position: relative;
+    margin-top: 30px;
+}
+
+.whoWeAre_people
+{
+    background-color: cyan;
+    overflow: hidden;
+    position: relative;
+}
+
+.slides
+{
+    display: flex;
+    transition: 0.3s;
+}
+
+.arrow 
+{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.prev 
+{
+    display: none;
+    left: -50px;
+}
+
+.next 
+{
+    right: -50px;
+}
 
 
 /* --------MISE EN FORME PAYMENTSMETHODS-------- */
