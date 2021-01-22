@@ -10,7 +10,7 @@
 
     <body>
 
-        <svg style="width: 0; height: 0;">
+        <svg class="svg_stock" style="width: 0; height: 0;">
             <symbol id="icon-meditation" viewBox="0 0 32 32">
                 <path fill="#528e8e" style="fill: var(--color1, #528e8e)" d="M20 4c0 2.209-1.791 4-4 4s-4-1.791-4-4c0-2.209 1.791-4 4-4s4 1.791 4 4z"></path>
                 <path fill="#528e8e" style="fill: var(--color1, #528e8e)" d="M23.774 29.106l-4.926 1.847 2.45 0.92c0.209 0.081 0.45 0.127 0.702 0.127 0.852 0 1.58-0.533 1.868-1.285l0.005-0.014c0.078-0.204 0.123-0.44 0.123-0.686 0-0.332-0.082-0.646-0.227-0.921l0.005 0.011z"></path>
@@ -105,8 +105,15 @@
                 </div>
                 
             </div>
-            
-            <div class="header_banner"></div>
+    
+            <div class="header_banner">
+                <img 
+                    src="images/photoBandeau_400.jpg" 
+                    srcset="images/photoBandeau_800.jpg 800w,
+                    images/photoBandeau_1200.jpg 1200w,
+                    images/photoBandeau_400.jpg 400w"
+                    alt="Chien">
+            </div>
             
         </header>
 
@@ -127,7 +134,7 @@
 
                 <div class="momentProduct_scrollingMenu">
 
-                    <div class="scrollingMenu_top">
+                    <div class="scrollingMenu_top" id="scrollingMenu_top">
                         <img src="icônes/dog-paw.png" alt="patte de chien">
                         <h3>Chien</h3>
                         <img id="arrow" src="icônes/chevronBlack.png" alt="flèche-haut">
@@ -231,27 +238,61 @@
                     </div>
                 </article>
 
-                <article class="whoWeAre_people">
-
-                    <div class="perso" id="perso1">
-                        <img src="images/perso1_img.png" alt="Homme">
-                        <p class="identity">Pierre-Adrien</p>
-                        <p class="profession">Président Directeur Génréal</p>
-                    </div>
-
-                    <div class="perso" id="perso1">
-                        <img src="images/perso1_img.png" alt="Homme">
-                        <p class="identity">Pierre-Adrien</p>
-                        <p class="profession">Président Directeur Génréal</p>
-                    </div>
-
-                    <div class="perso" id="perso1">
-                        <img src="images/perso1_img.png" alt="Homme">
-                        <p class="identity">Pierre-Adrien</p>
-                        <p class="profession">Président Directeur Génréal</p>
-                    </div>
-                    
-                </article>
+                <div class="container">
+                    <button id="prev" class="arrow prev"> < </button>
+                    <button id="next" class="arrow next"> > </button>
+            
+                    <article class="whoWeAre_people">
+            
+                        <div class="slides" id="slides">
+                
+                            <div class="perso" id="perso1">
+                                <img src="images/perso1_img.png" alt="Homme">
+                                <p class="identity">Pierre-Adrien</p>
+                                <p class="profession">Président Directeur Général</p>
+                            </div>
+                        
+                            <div class="perso" id="perso2">
+                                <img src="images/perso1_img.png" alt="Homme">
+                                <p class="identity">Pierre-Adrien</p>
+                                <p class="profession">Président Directeur Génréal</p>
+                            </div>
+                        
+                            <div class="perso" id="perso3">
+                                <img src="images/perso1_img.png" alt="Homme">
+                                <p class="identity">Pierre-Adrien</p>
+                                <p class="profession">Président Directeur Génréal</p>
+                            </div>
+            
+                            <div class="perso" id="perso4">
+                                <img src="images/perso1_img.png" alt="Homme">
+                                <p class="identity">Pierre-Adrien</p>
+                                <p class="profession">Président Directeur Génréal</p>
+                            </div>
+            
+                            <div class="perso" id="perso5">
+                                <img src="images/perso1_img.png" alt="Homme">
+                                <p class="identity">Pierre-Adrien</p>
+                                <p class="profession">Président Directeur Génréal</p>
+                            </div>
+            
+                            <div class="perso" id="perso6">
+                                <img src="images/perso1_img.png" alt="Homme">
+                                <p class="identity">Pierre-Adrien</p>
+                                <p class="profession">Président Directeur Génréal</p>
+                            </div>
+            
+                            <div class="perso" id="perso7">
+                                <img src="images/perso1_img.png" alt="Homme">
+                                <p class="identity">Pierre-Adrien</p>
+                                <p class="profession">Président Directeur Génréal</p>
+                            </div>
+            
+                        </div>
+                  
+                    </article>    
+            
+                </div>
 
                 <article class="whoWeAre_commitments">
                     <h2>nos engagements</h2>
