@@ -2,7 +2,7 @@
 
 let scrollingMenuTop = document.getElementById('scrollingMenu_top');
 let scrollingList = document.getElementById('scrollingList');
-let arrow = document.getElementById('arrow');
+let arrow = document.getElementById('arrow_paw');
 
 let nbClicks = 0;
 
@@ -27,6 +27,11 @@ function scrolllingMenuApparition()
     console.log(nbClicks);
 }
 
+if (window.matchMedia("(min-width: 1024px)").matches) 
+{ 
+    scrollingList.style.display = "block";  
+} 
+
 
 // ---------------------------------------------GESION DU SLIDER CATEGORIES---------------------------------------------
 
@@ -46,7 +51,18 @@ nextButtonCategories.addEventListener('click', next1);
 
 spanMax1 = limit1 * 100;
 console.log("spanMax1 =" + spanMax1)
-slidesCategories.style.width = `${spanMax1}vw`;
+
+if (window.matchMedia("(min-width: 1024px)").matches) 
+{ 
+    slidesCategories.style.width = "100vw";
+    nextButtonCategories.style.display = "none";
+   
+} 
+else 
+{
+    slidesCategories.style.width = `${spanMax1}vw`;
+}
+
 console.log(slidesCategories.style.width)
 
 
@@ -80,6 +96,8 @@ function move1()
     prevButtonCategories.style.display = current1 === 0 ? "none" : "block";
     nextButtonCategories.style.display = current1 === limit1 - 1 ? "none" : "block";
 }
+
+
 
 // ---------------------------------------------GESION DU SLIDER PEOPLE---------------------------------------------
 
@@ -130,5 +148,14 @@ function move()
     slides.style.transform = `translateX(${transform}vw)`;
 
     prevButtonPeople.style.display = current === 0 ? "none" : "block";
-    nextButtonPeople.style.display = current === limit - 1 ? "none" : "block";
+    if (window.matchMedia("(min-width: 1024px)").matches) 
+    {
+        nextButtonPeople.style.display = current === (limit/3.5) - 1 ? "none" : "block"; 
+        console.log("current = "+ current);
+        console.log("limit = " + limit);
+    }
+    else
+    {
+        nextButtonPeople.style.display = current === limit - 1 ? "none" : "block";
+    }
 }
