@@ -6,23 +6,64 @@
 
 .header_top
 {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
     align-items: center;
-    justify-content: space-around;
-    width: 100%;
     position: fixed;
     top: 0;
+    width: 100%;
     height: 100.5px;
     background-color: white;
-
     z-index: 2;
 }
 
-.header_top svg
+.header_top nav
 {
     position: absolute;
+    width: 100%;
+    top: 0px;
 }
 
+#header_logo
+{
+    width: 147px;
+    height: 44px;
+}
+
+.header_top .header_features
+{
+    display: flex;
+    justify-content: space-around;
+}
+
+.header_features .icon_features
+{
+    width: 30px;
+    height: 30px;
+}
+
+.userIcon1
+{
+    width: 50px;
+    height: 50px;
+    margin-left: 20px;
+}
+
+.userIcon1:hover
+{
+    transform: scale(1.1);
+}
+
+.header_features .userIcon2
+{
+    display: none;
+}
+
+.header_features .heartIcon
+{
+    margin: 0px 15px;
+}
 
 .header_top img
 {
@@ -30,21 +71,15 @@
     height: 30px;
 }
 
-.header_features
+.header_top .search_bar2
 {
-    margin-right: 1%;
-}
-
-#heartIcon
-{
-    margin-right: 15px;
+    display: none;
 }
 
 .header_banner
 {
     margin-top: 100.5px;
     height: 486px;
-    background-color: red;
 }
 
 .header_banner img
@@ -78,10 +113,8 @@
 .header_top .menu-icon 
 {
     cursor: pointer;
-    /* display: inline-block; */
     float: right;
     padding: 28px 20px;
-    /* position: relative; */
     user-select: none;
 }
 
@@ -214,6 +247,7 @@ p
     flex-direction: column;
     align-items: center;
     height: 198.5px;
+    margin-top: 55px;
     /* background-color: green; */
 }
 
@@ -234,6 +268,8 @@ p
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
 }
 
 .prev1 
@@ -258,6 +294,7 @@ p
 .category
 {
     position: relative;
+    transition: 0.5s;
 }
 
 .category img
@@ -268,7 +305,6 @@ p
     bottom: 12%;
     transform: translateX(-50%);
     z-index: 1;
-
 }
 
 #category_cat img, #category_rodent img, 
@@ -306,6 +342,7 @@ p
 
     /* background-color: purple; */
     font-family: 'UbuntuRegular', sans-serif;
+    margin-top: 55px;
 }
 
 #momentProduct h2
@@ -333,7 +370,7 @@ p
     padding: 0px 7px;
 }
 
-.scrollingMenu_top img
+.dog_paw, #arrow_paw
 {
     width: 20px;
     height: 20px;
@@ -367,6 +404,7 @@ p
     font-family: 'FredokaOne', sans-serif;
     transition: 0.3s;
     padding: 15px 0px;
+    font-size: 20px;
 }
 
 .underScrolling button:hover
@@ -412,6 +450,7 @@ p
 
 .momentProduct_description
 {
+    grid-area: decription;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -457,12 +496,13 @@ p
 
 #wellBeing
 {
-    /* background-color: maroon; */
+    position: relative;
 }
 
 .wellBeing_banner
 {
     background-color: var(--grey);
+
 }
 
 .wellBeingBanner_text
@@ -560,6 +600,19 @@ p
     width: 98%;
 }
 
+.veterinary_aside
+{
+    grid-area: aside;
+    position: relative;
+    display: none;
+}
+
+.veterinary_aside img
+{
+    position: absolute;
+    bottom: 10px;
+}
+
 .wellBeing_community
 {
     display: grid;
@@ -572,6 +625,20 @@ p
     row-gap: 20px;
 
     text-align: center;
+}
+
+.community_aside
+{
+    grid-area: aside;
+    position: relative;
+    display: none;
+}
+
+.community_aside img
+{
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
 }
 
 .wellBeing_community h2
@@ -674,6 +741,13 @@ p
     margin-top: 20px;
 }
 
+.arrow
+{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
 .perso
 {
     text-align: center;
@@ -701,8 +775,29 @@ p
     margin-top: 30px;
 }
 
+.whoWeAre_commitments h3
+{
+    grid-area: title;
+}
+
+.commitments_aside
+{
+    grid-area: aside;
+    position: relative;
+    display: none;
+}
+
+.commitments_aside img
+{
+    position: absolute;
+    right: 50%;
+    bottom: 30px;
+    transform: translateX(50%);
+}
+
 .commitments_content
 {
+    grid-area: content;
     display: grid;
     grid-template-columns: repeat(2, 1fr);;
     grid-template-rows: repeat(3,auto);
@@ -762,6 +857,21 @@ p
     border-radius: 8px;
     background-color: var(--grey);
     max-width: 345px;
+}
+
+.trust_aside
+{
+    grid-area: aside;
+    position: relative;
+    display: none;
+}
+
+.trust_aside img
+{
+    position: absolute;
+    right: 44%;
+    bottom: -1px;
+    transform: translateX(50%);
 }
 
 .trust_content p
@@ -991,6 +1101,20 @@ footer p
 /* ----------------------------GESTION MEDIA QUERIES---------------------------- */
 
 
+@media (min-width: 450px)
+{
+    .userIcon1
+    {
+        display: none;
+    }
+
+    .header_features .userIcon2
+    {
+        display: block;
+    }
+    
+}
+
 @media (min-width: 728px)
 {
     .header_banner
@@ -1148,9 +1272,31 @@ footer p
 
 @media (min-width: 1024px)
 {
+
+    .header_top
+    {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        justify-items: center;
+    }
+
+    #header_logo
+    {
+        position: initial;
+        grid-column: 3 / 4;
+        width: 252px;
+        height: 75px;
+    }
+
     .header_top .menu-icon
     {
         display: none;
+    }
+
+    .header_top nav
+    {
+        grid-column: 1 / 3;
+        position: initial;
     }
 
     .header_top nav .menu 
@@ -1161,6 +1307,27 @@ footer p
         height: initial;
 
         display: flex;
+        justify-content: space-evenly;
+    }
+
+    .header_top nav .search_bar
+    {
+        display: none;
+    }
+
+    .header_top .search_bar2
+    {
+        display: flex;
+        width: 100%;
+        max-width: 312px;
+        grid-column: 4 / 5;
+        margin-left: 50px;
+    }
+
+    .header_top .header_features
+    {
+        display: flex;
+        grid-column: 5 / 6;
     }
 
     .header_top li a 
@@ -1177,4 +1344,347 @@ footer p
         background-color: initial;
     }
 
+    #categories
+    {
+        height: auto;
+    }
+
+    .categories_slider
+    {
+        overflow: visible;
+    }
+
+    .slides_categories
+    {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        row-gap: 40px;
+        justify-content: center;
+    }
+
+    .categories_background
+    {
+        width: 100%;
+    }
+
+    .category:hover
+    {
+        transform: scale(1.2);
+        cursor: pointer;
+    }
+
+    #momentProduct
+    {
+        grid-template-areas:
+        "title title title"
+        "scrollingMenu product description" 
+        ;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .scrollingMenu_top
+    {
+        display: none;
+        margin: 0;
+    }
+
+    .scrolling
+    {
+        position: initial;
+        left: 0%;
+        transform: translateX(0%);
+        background-color: initial;
+        width: 100%;
+        border: none;
+    }
+
+    .scrolling button
+   {
+       color: #707070;
+   }
+
+   .underScrolling1 button 
+   {
+       color: var(--yellow);
+   }
+
+    .momentProduct_product p
+    {
+        text-align: left;
+        position: relative;
+        bottom: 1px;
+    }
+
+    .productImage img
+    {
+        height: 300px;
+        top: 54px;
+        left: 38px;
+    }
+
+    .productImage svg
+    {
+        height: 380px;
+        width: 355px;
+    }
+
+    .momentProduct_description
+    {
+        width: 246px;
+        align-self: center;
+    }
+
+    /* --------MISE EN FORME WELLBEING-------- */
+
+    .wellBeing_banner
+    {
+        display: grid;
+        grid-template-columns: 57% 1fr;
+        align-items: center;
+        height: 438px;
+    }
+
+    .wellBeingBanner_text
+    {
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .wellBeingBanner_image
+    {
+        align-self: flex-end;
+        text-align: left;
+    }
+
+    .wellBeing_banner h2, .wellBeing_banner p
+    {
+        text-align: left;
+        max-width: 824px;
+        width: initial;
+        margin-left: 8.5%;
+    }
+
+    .wellBeing_veterinary
+    {
+        grid-template-columns: auto 336px auto;
+        grid-template-areas: 
+        "photo title aside"
+        "photo description aside"
+        "photo button aside";
+    }
+
+        .veterinary_aside
+    {
+        display: flex;
+        transition: 1s;
+    }
+
+    .wellBeing_community
+    {
+        grid-template-columns: auto 580px;
+        grid-template-areas: 
+        "aside title"
+        "aside description"
+        "aside button";
+        column-gap: 30px;
+        align-items: center;
+        justify-self: flex-end;
+        width: auto;
+    }
+
+    .community_aside
+    {
+        display: flex;
+        transition: 1s;
+    }
+
+    /* --------MISE EN FORME WHOWEARE-------- */
+
+    .whoWeAre_banner
+    {
+        display: grid;
+        grid-template-columns: 57% 1fr;
+    }
+
+    .whoWeAreBanner_text
+    {
+        align-items: flex-start;
+        text-align: left;
+        margin: 60px 0px;
+    }
+
+    .whoWeAre_banner h2, .whoWeAre_banner p
+    {
+        text-align: left;
+        max-width: 824px;
+        width: initial;
+        margin-left: 8.5%;
+    }
+
+    .whoWeAreBanner_text a
+    {
+        margin-left: 8.5%;
+    }
+
+    .perso
+    {
+        text-align: center;
+        width: 25vw;
+    }
+
+    .whoWeAre_commitments
+    {
+        display: grid;
+        grid-template-columns: auto 701px;
+        grid-template-areas: 
+        "aside title"
+        "aside content";
+        margin-top: 30px;
+        justify-items: center;
+        align-items: center;
+        justify-content: space-around;
+        width: auto;
+    }
+
+    .commitments_content
+    {
+        width: 100%;
+    }
+
+    .commitments_aside
+    {
+        display: flex;
+        transition: 1s;
+        top: 25px;
+    }
+
+    .whoWeAre_trust
+    {
+        display: grid;
+        grid-template-columns: 701px auto;
+        grid-template-areas: 
+        "title aside"
+        "content aside";
+        margin-top: 30px;
+        justify-items: center;
+        align-items: center;
+        justify-content: space-around;
+        width: auto;
+    }
+
+    .trust_content
+    {
+        width: 100%;
+    }
+
+    .trust_aside
+    {
+        display: flex;
+        transition: 1s;
+        top: 25px;
+    }
+    
+    .footer_principalNav
+    {
+        text-align: left;
+    }
+
+    .footer_principalNav a
+    {
+        text-decoration: none;
+        color: white;
+        font-family: 'UbuntuRegular', sans-serif;
+        font-size: 14px;
+    }
+
+    .footer_principalNav a:hover
+    {
+        color: var(--yellow);
+    }
+    
+    .princpalNav_account, .princpalNav_us
+    {
+        align-items: flex-start;
+    }
+
+    .princpalNav_account h3, .princpalNav_us h3
+    {
+        margin-bottom: 15px;
+        margin: 0px 15px 15px 0px;
+        text-transform: uppercase;
+    }
+    
+    .international_links
+    {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        column-gap: 20px;;
+    }
+    
+    
+}
+
+
+@media (min-width: 1110px)
+{
+    .veterinary_aside
+    {
+        margin-left: 122px;
+        transition: 1s;
+    }
+
+    .community_aside
+    {
+        margin-right: 122px;
+        transition: 1s;
+    }
+}
+  
+.search 
+{
+    position: relative;
+    width: 100%;
+    display: flex;
+}
+
+.searchTerm 
+{
+    width: 100%;
+    border: 3px solid var(--yellow);
+    padding: 5px;
+    height: 36px;
+    border-radius: 8px;
+    outline: none;
+    color: #9DBFAF;
+}
+
+.searchTerm:focus
+{
+    color: var(--grey);
+}
+
+.searchButton 
+{
+    position: absolute;
+    top: 5.5px;
+    right: 0;
+    color: black;
+    border-radius: 8px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    user-select: none;
+}
+
+.icon-search
+{
+    width: 25px;
+    height: 25px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.search_bar
+{
+    width: 80%;
+    padding-left: 20px;
 }
