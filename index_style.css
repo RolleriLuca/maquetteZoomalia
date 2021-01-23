@@ -482,6 +482,12 @@ p
     border-radius: 8px;
    
     background-color: var(--yellow);
+    transition: 0.3s;
+}
+
+.momentProduct_description a:hover
+{
+    transform: scale(1.1);
 }
 
 .momentProduct_description img
@@ -593,6 +599,12 @@ p
     border-radius: 8px;
    
     background-color: var(--yellow);
+    transition: 0.3s;
+}
+
+.wellBeing_veterinary a:hover
+{
+    transform: scale(1.1);
 }
 
 .wellBeing_veterinary a img
@@ -675,6 +687,12 @@ p
     border-radius: 8px;
    
     background-color: var(--yellow);
+    transition: 0.3s;
+}
+
+.wellBeing_community a:hover
+{
+    transform: scale(1.1);
 }
 
 .wellBeing_community a img
@@ -713,6 +731,12 @@ p
     margin-top: 20px;
    
     background-color: var(--yellow);
+    transition: 0.3s;
+}
+
+.whoWeAreBanner_text a:hover
+{
+    transform: scale(1.1);
 }
 
 .whoWeAreBanner_text a img
@@ -908,6 +932,12 @@ p
     margin-bottom: 45px;
    
     background-color: var(--yellow);
+    transition: 0.3s;
+}
+
+.trust_content a:hover
+{
+    transform: scale(1.1);
 }
 
 .trust_content a img
