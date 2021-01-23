@@ -41,6 +41,13 @@
 {
     width: 30px;
     height: 30px;
+    transition: 0.3s;
+}
+
+.header_features .icon_features:hover
+{
+    transform: scale(1.1);
+    cursor: pointer;
 }
 
 .userIcon1
