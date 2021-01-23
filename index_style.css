@@ -15,13 +15,24 @@
     height: 100.5px;
     background-color: white;
 
-    z-index: 1;
+    z-index: 2;
 }
+
+.header_top svg
+{
+    position: absolute;
+}
+
 
 .header_top img
 {
     width: 30px;
     height: 30px;
+}
+
+.header_features
+{
+    margin-right: 1%;
 }
 
 #heartIcon
@@ -58,6 +69,10 @@
     padding: 20px 20px;
     border-right: 1px solid #f4f4f4;
     text-decoration: none;
+
+    font-family: 'UbuntuRegular', sans-serif;
+    color: var(--grey);
+    font-size: 25px;
 }
 
 .header_top .menu-icon 
@@ -74,15 +89,16 @@
 .header_top .menu-btn:hover 
 {
     background-color: #f4f4f4;
+    color: var(--yellow);
 }
 
-.header_top .menu 
+.header_top nav .menu 
 {
-    /* clear: both; */
     position: absolute;
     width: 100%;
     top: 100.5px;
     height: 0px;
+    left: 0px;
     transition: height .2s ease-out;
 }
 
@@ -90,7 +106,6 @@
 {
     cursor: pointer;
     display: inline-block;
-    float: right;
     padding: 28px 20px;
     position: relative;
     user-select: none;
@@ -103,7 +118,7 @@
     height: 2px;
     position: relative;
     transition: background .2s ease-out;
-    width: 18px;
+    width: 22px;
 }
 
 .navicon:before
@@ -116,7 +131,7 @@
     transition: all .2s ease-out;
     width: 100%;   
 
-    top: 5px;
+    top: 7px;
 }
 
 .navicon:after 
@@ -129,7 +144,7 @@
     transition: all .2s ease-out;
     width: 100%;
 
-    top: -5px;
+    top: -7px;
 }
 
 .menu-btn 
@@ -137,7 +152,7 @@
     display: none;
 }
 
-#menu-btn:checked ~ .menu
+#menu-btn:checked ~ nav .menu
 {
     height: 100vh;
 }
@@ -185,9 +200,9 @@ p
 
 /* ----------------------------MISE EN FORME DES SECTIONS PRINCIPALES---------------------------- */
 
-.secondary_container
+.wellBeing_container
 {
-    margin-top: 55px;
+    margin: 55px 0px;
 }
 
 
@@ -202,9 +217,76 @@ p
     /* background-color: green; */
 }
 
-.categories_visual
+.categories_slider
 {
+    overflow: hidden;
+}
+
+.container_categories
+{
+    position: relative;
+    width: 100vw;
     margin-top: 45px;
+}
+
+.arrow1
+{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.prev1 
+{
+    display: none;
+    left: 25px;
+    z-index: 1;
+}
+
+.next1
+{
+    right: 25px;
+    z-index: 1;
+}
+
+.slides_categories
+{
+    display: flex;
+    transition: 0.3s;
+}
+
+.category
+{
+    position: relative;
+}
+
+.category img
+{
+    position: absolute;
+    height: 116px;
+    left: 50%;
+    bottom: 12%;
+    transform: translateX(-50%);
+    z-index: 1;
+
+}
+
+#category_cat img, #category_rodent img, 
+#category_aquario img, #category_reptile img, 
+#category_bird img 
+{
+    bottom: 0%;
+}
+
+#category_pool img
+{
+    height: 90px;
+}
+
+.categories_background
+{
+    width: 100vw;
+    height: 107px;
 }
 
 
@@ -235,19 +317,20 @@ p
 {
     margin-top: 30px;
     grid-area: scrollingMenu;
-    background-color: green;
 }
 
 .scrollingMenu_top
 {
     display: flex;
     flex-direction: row;
+    cursor: pointer;
 }
 
 .scrollingMenu_top h3
 {
+    font-family: 'FredokaOne', sans-serif;
     color: var(--yellow);
-    padding: 0px 7px 10px 7px;
+    padding: 0px 7px;
 }
 
 .scrollingMenu_top img
@@ -260,11 +343,36 @@ p
 {
     display: none;
     position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    background-color: white;
+    width: 98%;
+    border-radius: 8px;
+    border: solid 2px var(--yellow);
 }
 
 .underScrolling
 {
-    list-style: none;;
+    list-style: none;
+    font-family: 'FredokaOne', sans-serif;
+    padding-left: 15px;  
+}
+
+.underScrolling button
+{
+    color: black;
+    border: none;
+    background-color: transparent;
+    font-family: 'FredokaOne', sans-serif;
+    transition: 0.3s;
+    padding: 15px 0px;
+}
+
+.underScrolling button:hover
+{
+    color: var(--yellow);
+    cursor: pointer;
 }
 
 .momentProduct_product
@@ -381,6 +489,7 @@ p
 .wellBeing_banner p
 {
     font-size: 16px;
+    width: 98%;
 }
 
 .wellBeingBanner_image
@@ -407,13 +516,25 @@ p
 
 .wellBeing_veterinary h2
 {
+    grid-area: title;
      text-transform: uppercase;
      font-size: 20px;
      margin-top: 30px;
 }
 
+.wellBeing_veterinary img
+{
+    grid-area: photo;
+}
+
+.wellBeing_veterinary p
+{
+    grid-area: description;
+}
+
 .wellBeing_veterinary a
 {
+    grid-area: button;
     display: flex;
     width: 274px;
     justify-content: center;
@@ -434,6 +555,11 @@ p
     margin-left: 15px;
 }
 
+.wellBeing_veterinary p, .wellBeing_community p
+{
+    width: 98%;
+}
+
 .wellBeing_community
 {
     display: grid;
@@ -450,13 +576,20 @@ p
 
 .wellBeing_community h2
 {
-     text-transform: uppercase;
-     font-size: 20px;
-     margin-top: 30px;
+    grid-area: title;
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+.wellBeing_community p
+{
+    grid-area: description;
 }
 
 .wellBeing_community a
 {
+    grid-area: button;
     display: flex;
     width: 274px;
     justify-content: center;
@@ -520,7 +653,7 @@ p
     color: white;
     text-align: center;
     padding-top: 20px;
-    width: 245px;
+    width: 98%;
 }
 
 .whoWeAre_banner h2
@@ -544,6 +677,7 @@ p
 .perso
 {
     text-align: center;
+    width: 100vw;
 }
 
 .identity
@@ -579,6 +713,7 @@ p
     width: 92%;
     border-radius: 8px;
     background-color: var(--grey);
+    max-width: 345px;
 }
 
 .icon-meditation, .icon-suggestion
@@ -626,6 +761,7 @@ p
     margin-top: 20px;
     border-radius: 8px;
     background-color: var(--grey);
+    max-width: 345px;
 }
 
 .trust_content p
@@ -668,7 +804,7 @@ p
 
 .container
 {
-    width: 203px;
+    width: 100vw;
     margin: auto;
     position: relative;
     margin-top: 30px;
@@ -676,7 +812,7 @@ p
 
 .whoWeAre_people
 {
-    background-color: cyan;
+    /* background-color: cyan; */
     overflow: hidden;
     position: relative;
 }
@@ -697,37 +833,32 @@ p
 .prev 
 {
     display: none;
-    left: -50px;
+    left: 25px;
+    z-index: 1;
 }
 
 .next 
 {
-    right: -50px;
+    right: 25px;
+    z-index: 1;
 }
 
 
 /* --------MISE EN FORME PAYMENTSMETHODS-------- */
-#paymentMethods
+
+.paymentMethods
 {
-    display: grid;
-    grid-template-rows: repeat(2, auto);
-    margin: 80px 0px 20px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 80px 0px 10px;
 }
 
-.firstMethodsPayment
+.paymentMethods img
 {
-    display: grid;
-    grid-template-columns: repeat(4, auto);
-    column-gap: 5px;
+    margin: 0px 20px 10px 20px;
 }
 
-.secondMethodsPayment
-{
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    align-items: flex-end;
-    column-gap: 5px;
-}
 
 .masterCard
 {
@@ -768,7 +899,12 @@ footer p
     color: white;
 }
 
-
+.footer_logo
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 
 .footer_socialMedia
@@ -796,6 +932,7 @@ footer p
 .footer_principalNav h3 
 {
     margin-bottom: 15px;
+    margin: 0px 15px 15px 15px;
     text-transform: uppercase;
 }
 
@@ -809,6 +946,16 @@ footer p
 .footer_principalNav h3 a:hover
 {
     text-decoration: underline;
+}
+
+.footer_principalNav li
+{
+    display: none;
+    list-style: none;
+    color: white;
+    font-family: 'UbuntuRegular', sans-serif;
+    font-size: 14px;
+    padding-bottom: 15px;
 }
 
 .footer_secondaryNav ul
@@ -837,4 +984,197 @@ footer p
 {
     color: var(--yellow);
     text-decoration: underline;
+}
+
+
+
+/* ----------------------------GESTION MEDIA QUERIES---------------------------- */
+
+
+@media (min-width: 728px)
+{
+    .header_banner
+    {
+        overflow: hidden;
+    }
+
+    .header_banner img
+    {
+        height: auto;
+    }
+}
+
+@media (min-width: 768px)
+{
+
+    .wellBeing_container
+    {
+        display: grid;
+        
+    }
+
+    .wellBeing_veterinary
+    {
+        grid-template-columns: repeat(2, auto);
+        grid-template-areas: 
+        "photo title"
+        "photo description"
+        "photo button";
+        justify-items: center;
+        align-items: center;
+        column-gap: 30px;
+
+        margin-top: 30px;
+        margin-left: 8.5%;
+        width: 580px;
+    }
+
+    .wellBeing_veterinary h2
+    {
+        margin-top: 0px;
+    }
+
+    .wellBeing_community
+    {
+        justify-self: flex-end;
+        margin-right: 8.5%;
+        width: 580px;
+    }
+
+    .whoWeAreBanner_text
+    {
+        margin: 0% 4.25%;
+    }
+
+    .commitments_content
+    {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: initial;
+        justify-items: center;
+        align-items: center;
+        row-gap: 0px;
+        background-color: var(--grey);
+        max-width: 701px;
+        height: 278px;;
+    }
+
+    .content_vip 
+    {
+        grid-column: span 1;
+        margin-bottom: 0px;
+    }
+
+    .content_meditation, .content_suggestion
+    {
+        padding-bottom: 5px;
+    }
+
+    .whoWeAre_trust
+    {
+        margin-top: 50px;
+    }
+
+    .trust_content
+    {
+        max-width: 701px;
+    }
+
+    footer 
+    {
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        grid-template-rows: repeat(3, auto);
+        height: 368px;
+    }
+
+    .footer_logo
+    {
+        align-self: flex-end;
+    }
+
+    .footer_socialMedia
+    {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        align-self: flex-start;
+    }
+
+    .footer_principalNav
+    {
+        grid-column: 2 / 4;
+        grid-row: 1 / 3;
+
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: center;
+        align-items: flex-start;
+    }
+
+    .footer_principalNav li
+    {
+        display: block;
+    }
+
+    .princpalNav_account
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .princpalNav_us
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .princpalNav_international
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer_secondaryNav
+    {
+        grid-column: 1 / -1;
+        grid-row: 3 / 4 ;
+    }
+
+}
+
+@media (min-width: 1024px)
+{
+    .header_top .menu-icon
+    {
+        display: none;
+    }
+
+    .header_top nav .menu 
+    {
+        position: initial;
+        width: initial;
+        top: initial;
+        height: initial;
+
+        display: flex;
+    }
+
+    .header_top li a 
+    {
+        display: inline;
+        border-right: initial;
+        text-decoration: none;
+        padding: 20px 10px;
+        font-size: 20px;
+    }
+
+    .header_top li a:hover
+    {
+        background-color: initial;
+    }
+
 }
